@@ -1,0 +1,6 @@
+<RCC>
+  <qresource prefix="NumericalCalculation">
+    <file>Q2.png</file>
+    <file>Q1.png</file>
+  </qresource>
+</RCC>

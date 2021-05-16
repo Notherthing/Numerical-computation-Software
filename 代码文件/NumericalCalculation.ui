@@ -1,0 +1,1884 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>NumericalCalculationClass</class>
+ <widget class="QMainWindow" name="NumericalCalculationClass">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1087</width>
+    <height>911</height>
+   </rect>
+  </property>
+  <property name="font">
+   <font>
+    <family>微软雅黑</family>
+   </font>
+  </property>
+  <property name="cursor">
+   <cursorShape>ArrowCursor</cursorShape>
+  </property>
+  <property name="windowTitle">
+   <string>NumericalCalculation</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true"/>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <widget class="QTabWidget" name="tabWidget">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>1081</width>
+      <height>861</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="currentIndex">
+     <number>0</number>
+    </property>
+    <property name="tabBarAutoHide">
+     <bool>false</bool>
+    </property>
+    <widget class="QWidget" name="tab">
+     <attribute name="title">
+      <string>插值计算</string>
+     </attribute>
+     <widget class="QLabel" name="label">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>601</width>
+        <height>141</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Times New Roman</family>
+        <pointsize>20</pointsize>
+        <weight>50</weight>
+        <italic>false</italic>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="cursor">
+       <cursorShape>ForbiddenCursor</cursorShape>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="text">
+       <string>This is my first QT(C++) project. 
+If there is something unsatisfactory, 
+please excuse my weakpoints.
+Thanks!</string>
+      </property>
+     </widget>
+     <widget class="QWidget" name="verticalLayoutWidget">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>180</y>
+        <width>601</width>
+        <height>312</height>
+       </rect>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout">
+       <item>
+        <widget class="QLabel" name="label_2">
+         <property name="font">
+          <font>
+           <family>微软雅黑</family>
+           <pointsize>11</pointsize>
+          </font>
+         </property>
+         <property name="cursor">
+          <cursorShape>ForbiddenCursor</cursorShape>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::Panel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Plain</enum>
+         </property>
+         <property name="text">
+          <string>x_Spot_value  请输入所有点的x值：
+                                                                      每两个值之间，请用空格隔开。</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="lineEdit"/>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_3">
+         <property name="font">
+          <font>
+           <family>微软雅黑</family>
+           <pointsize>11</pointsize>
+          </font>
+         </property>
+         <property name="cursor">
+          <cursorShape>ForbiddenCursor</cursorShape>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::Panel</enum>
+         </property>
+         <property name="text">
+          <string>y_Spot_value  请输入所有点的y值：
+                                                                      每两个值之间，请用空格隔开。</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="lineEdit_2"/>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_4">
+         <property name="font">
+          <font>
+           <family>微软雅黑</family>
+           <pointsize>11</pointsize>
+          </font>
+         </property>
+         <property name="cursor">
+          <cursorShape>ForbiddenCursor</cursorShape>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::Panel</enum>
+         </property>
+         <property name="text">
+          <string> L(p) 中 p为：
+                                                                      请在此输入估值参数。</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="lineEdit_3"/>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_11">
+         <property name="font">
+          <font>
+           <family>微软雅黑</family>
+           <pointsize>11</pointsize>
+          </font>
+         </property>
+         <property name="cursor">
+          <cursorShape>ForbiddenCursor</cursorShape>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::Panel</enum>
+         </property>
+         <property name="text">
+          <string>分段插值多项式所使用点数 degree 为:
+                                                                      请在此输入degree。 </string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="lineEdit_4"/>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="verticalLayoutWidget_2">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>540</y>
+        <width>601</width>
+        <height>272</height>
+       </rect>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_2">
+       <item>
+        <widget class="QLabel" name="label_5">
+         <property name="font">
+          <font>
+           <family>微软雅黑</family>
+           <pointsize>11</pointsize>
+          </font>
+         </property>
+         <property name="cursor">
+          <cursorShape>ForbiddenCursor</cursorShape>
+         </property>
+         <property name="text">
+          <string>拉格朗日插值多项式如下：</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_6">
+         <property name="font">
+          <font>
+           <family>微软雅黑</family>
+           <pointsize>8</pointsize>
+          </font>
+         </property>
+         <property name="cursor">
+          <cursorShape>ForbiddenCursor</cursorShape>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::Box</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_7">
+         <property name="font">
+          <font>
+           <family>微软雅黑</family>
+           <pointsize>11</pointsize>
+          </font>
+         </property>
+         <property name="cursor">
+          <cursorShape>ForbiddenCursor</cursorShape>
+         </property>
+         <property name="text">
+          <string>拉格朗日估值结果如下：</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_8">
+         <property name="font">
+          <font>
+           <family>微软雅黑</family>
+           <pointsize>11</pointsize>
+          </font>
+         </property>
+         <property name="cursor">
+          <cursorShape>ForbiddenCursor</cursorShape>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::Box</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_9">
+         <property name="font">
+          <font>
+           <family>微软雅黑</family>
+           <pointsize>11</pointsize>
+          </font>
+         </property>
+         <property name="cursor">
+          <cursorShape>ForbiddenCursor</cursorShape>
+         </property>
+         <property name="text">
+          <string>牛顿插值法估值结果如下：</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_10">
+         <property name="font">
+          <font>
+           <family>微软雅黑</family>
+           <pointsize>11</pointsize>
+          </font>
+         </property>
+         <property name="cursor">
+          <cursorShape>ForbiddenCursor</cursorShape>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::Box</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_12">
+         <property name="font">
+          <font>
+           <family>微软雅黑</family>
+           <pointsize>11</pointsize>
+          </font>
+         </property>
+         <property name="cursor">
+          <cursorShape>ForbiddenCursor</cursorShape>
+         </property>
+         <property name="text">
+          <string>分段插值估值结果如下:</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_13">
+         <property name="font">
+          <font>
+           <family>微软雅黑</family>
+           <pointsize>11</pointsize>
+          </font>
+         </property>
+         <property name="cursor">
+          <cursorShape>ForbiddenCursor</cursorShape>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::Box</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_14">
+         <property name="font">
+          <font>
+           <family>微软雅黑</family>
+           <pointsize>11</pointsize>
+          </font>
+         </property>
+         <property name="cursor">
+          <cursorShape>ForbiddenCursor</cursorShape>
+         </property>
+         <property name="text">
+          <string>分段插值多项式如下:</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_15">
+         <property name="font">
+          <font>
+           <family>微软雅黑</family>
+           <pointsize>8</pointsize>
+          </font>
+         </property>
+         <property name="cursor">
+          <cursorShape>ForbiddenCursor</cursorShape>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::Box</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QLabel" name="label_16">
+      <property name="geometry">
+       <rect>
+        <x>750</x>
+        <y>280</y>
+        <width>291</width>
+        <height>81</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>微软雅黑</family>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="cursor">
+       <cursorShape>ForbiddenCursor</cursorShape>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::Box</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Sunken</enum>
+      </property>
+      <property name="text">
+       <string>拉格朗日插值函数曲线：蓝色
+分段插值函数曲线：红色
+红色曲线突然变0，则代表超出分段插值估计范围</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton">
+      <property name="geometry">
+       <rect>
+        <x>200</x>
+        <y>500</y>
+        <width>141</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>微软雅黑</family>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="cursor">
+       <cursorShape>PointingHandCursor</cursorShape>
+      </property>
+      <property name="text">
+       <string>显示插值计算结果</string>
+      </property>
+     </widget>
+     <widget class="QCalendarWidget" name="calendarWidget">
+      <property name="geometry">
+       <rect>
+        <x>820</x>
+        <y>0</y>
+        <width>248</width>
+        <height>197</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+     </widget>
+     <widget class="QCustomPlot" name="customPlot" native="true">
+      <property name="geometry">
+       <rect>
+        <x>660</x>
+        <y>420</y>
+        <width>411</width>
+        <height>361</height>
+       </rect>
+      </property>
+      <property name="cursor">
+       <cursorShape>OpenHandCursor</cursorShape>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="tab_2">
+     <attribute name="title">
+      <string>数值积分</string>
+     </attribute>
+     <widget class="QWidget" name="verticalLayoutWidget_4">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>510</y>
+        <width>311</width>
+        <height>225</height>
+       </rect>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_4">
+       <item>
+        <widget class="QLabel" name="label_17">
+         <property name="font">
+          <font>
+           <pointsize>11</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>请输入积分下限 a 的值：</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="lineEdit_5"/>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_18">
+         <property name="font">
+          <font>
+           <pointsize>11</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>请输入积分上限 b 的值：</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="lineEdit_6"/>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_19">
+         <property name="font">
+          <font>
+           <pointsize>11</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>请输入等分值 n ： (步长为 h=(b-a)/n )</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="lineEdit_7"/>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_30">
+         <property name="font">
+          <font>
+           <pointsize>12</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>请输入要求的精度 e ：</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="lineEdit_8"/>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QLabel" name="label_20">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>250</y>
+        <width>301</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="cursor">
+       <cursorShape>ForbiddenCursor</cursorShape>
+      </property>
+      <property name="text">
+       <string>请在此输入要进行数值积分的积分函数。</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_21">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>450</y>
+        <width>311</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="cursor">
+       <cursorShape>ForbiddenCursor</cursorShape>
+      </property>
+      <property name="text">
+       <string>请在此输入数值积分的相关参数。</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_2">
+      <property name="geometry">
+       <rect>
+        <x>620</x>
+        <y>250</y>
+        <width>121</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Microsoft Himalaya</family>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>进行数值积分计算</string>
+      </property>
+     </widget>
+     <widget class="QWidget" name="verticalLayoutWidget_5">
+      <property name="geometry">
+       <rect>
+        <x>460</x>
+        <y>310</y>
+        <width>471</width>
+        <height>421</height>
+       </rect>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_5">
+       <item>
+        <widget class="QLabel" name="label_23">
+         <property name="text">
+          <string>复合梯形公式计算结果如下：</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_22">
+         <property name="frameShape">
+          <enum>QFrame::Box</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Sunken</enum>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_24">
+         <property name="text">
+          <string>复合Simpson积分公式计算结果如下：</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_25">
+         <property name="frameShape">
+          <enum>QFrame::Box</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Sunken</enum>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_26">
+         <property name="text">
+          <string>变步长控制精度计算积分结果如下：</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_27">
+         <property name="frameShape">
+          <enum>QFrame::Box</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Sunken</enum>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_28">
+         <property name="text">
+          <string>确定的最佳步长为：</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_29">
+         <property name="frameShape">
+          <enum>QFrame::Box</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Sunken</enum>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_31">
+         <property name="text">
+          <string>Romberg积分公式积分结果如下：</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_32">
+         <property name="frameShape">
+          <enum>QFrame::Box</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Sunken</enum>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QCalendarWidget" name="calendarWidget_2">
+      <property name="geometry">
+       <rect>
+        <x>820</x>
+        <y>0</y>
+        <width>248</width>
+        <height>197</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_33">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>30</y>
+        <width>391</width>
+        <height>151</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Times New Roman</family>
+        <pointsize>20</pointsize>
+       </font>
+      </property>
+      <property name="cursor">
+       <cursorShape>ForbiddenCursor</cursorShape>
+      </property>
+      <property name="text">
+       <string>Happy to see you again！
+This is function 2.
+特别感谢俞丁翠同学
+在此功能中给予的帮助！</string>
+      </property>
+     </widget>
+     <widget class="QWidget" name="verticalLayoutWidget_3">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>330</y>
+        <width>301</width>
+        <height>80</height>
+       </rect>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_3">
+       <item>
+        <widget class="QLabel" name="label_50">
+         <property name="text">
+          <string>F(x)=</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="lineEdit_15"/>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="tab_3">
+     <attribute name="title">
+      <string>线方程组的直接解法</string>
+     </attribute>
+     <widget class="QLabel" name="label_34">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>30</y>
+        <width>391</width>
+        <height>151</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Times New Roman</family>
+        <pointsize>20</pointsize>
+       </font>
+      </property>
+      <property name="cursor">
+       <cursorShape>ForbiddenCursor</cursorShape>
+      </property>
+      <property name="text">
+       <string>Happy to see you again！
+This is function 3.
+Author: 黄宇辰
+StudentID: 10185102253</string>
+      </property>
+     </widget>
+     <widget class="QWidget" name="verticalLayoutWidget_6">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>250</y>
+        <width>561</width>
+        <height>541</height>
+       </rect>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_6">
+       <item>
+        <widget class="QLabel" name="label_35">
+         <property name="font">
+          <font>
+           <pointsize>11</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>求解线方程组形式如下：
+ [系数矩阵][解向量] = [常数向量]</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_36">
+         <property name="font">
+          <font>
+           <pointsize>11</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>请输入解向量大小 n ：</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="lineEdit_9"/>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_37">
+         <property name="font">
+          <font>
+           <pointsize>11</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>请输入系数矩阵(n x n):             
+                                   *分n行输入，每行输入n个数，每行中每两个数用空格分隔</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QTextEdit" name="textEdit"/>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_38">
+         <property name="font">
+          <font>
+           <pointsize>11</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>请输入常数向量的转置矩阵：</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="lineEdit_10"/>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QCalendarWidget" name="calendarWidget_3">
+      <property name="geometry">
+       <rect>
+        <x>820</x>
+        <y>0</y>
+        <width>248</width>
+        <height>197</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QWidget" name="verticalLayoutWidget_7">
+      <property name="geometry">
+       <rect>
+        <x>310</x>
+        <y>60</y>
+        <width>267</width>
+        <height>121</height>
+       </rect>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_7">
+       <item>
+        <widget class="QLabel" name="label_39">
+         <property name="text">
+          <string>选用以下方法之一进行计算：</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QRadioButton" name="radioButton_5">
+         <property name="font">
+          <font>
+           <pointsize>10</pointsize>
+          </font>
+         </property>
+         <property name="autoFillBackground">
+          <bool>false</bool>
+         </property>
+         <property name="text">
+          <string>高斯顺序消去法(线性方程组)</string>
+         </property>
+         <property name="checked">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QRadioButton" name="radioButton_8">
+         <property name="text">
+          <string>平方根法(对称正定阵系数阵线方程组)</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QRadioButton" name="radioButton_9">
+         <property name="text">
+          <string>追赶法(三对角形线性方程组)</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QPushButton" name="pushButton_3">
+      <property name="geometry">
+       <rect>
+        <x>330</x>
+        <y>200</y>
+        <width>141</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>进行线性方程组求解</string>
+      </property>
+     </widget>
+     <widget class="QWidget" name="verticalLayoutWidget_8">
+      <property name="geometry">
+       <rect>
+        <x>590</x>
+        <y>250</y>
+        <width>411</width>
+        <height>541</height>
+       </rect>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_8">
+       <item>
+        <widget class="QLabel" name="label_40">
+         <property name="font">
+          <font>
+           <pointsize>11</pointsize>
+          </font>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::NoFrame</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Plain</enum>
+         </property>
+         <property name="text">
+          <string>计算结果如下：</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QTextBrowser" name="textBrowser"/>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="tab_4">
+     <attribute name="title">
+      <string>线方程组的迭代解法</string>
+     </attribute>
+     <widget class="QLabel" name="label_41">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>30</y>
+        <width>391</width>
+        <height>151</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Times New Roman</family>
+        <pointsize>20</pointsize>
+       </font>
+      </property>
+      <property name="cursor">
+       <cursorShape>ForbiddenCursor</cursorShape>
+      </property>
+      <property name="text">
+       <string>Happy to see you again！
+This is function 4.
+Author: 黄宇辰
+StudentID: 10185102253</string>
+      </property>
+     </widget>
+     <widget class="QWidget" name="verticalLayoutWidget_9">
+      <property name="geometry">
+       <rect>
+        <x>360</x>
+        <y>60</y>
+        <width>267</width>
+        <height>121</height>
+       </rect>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_9">
+       <item>
+        <widget class="QLabel" name="label_42">
+         <property name="text">
+          <string>选用以下迭代方法之一进行计算：</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QRadioButton" name="radioButton_6">
+         <property name="font">
+          <font>
+           <pointsize>10</pointsize>
+          </font>
+         </property>
+         <property name="autoFillBackground">
+          <bool>false</bool>
+         </property>
+         <property name="text">
+          <string>雅各比迭代法</string>
+         </property>
+         <property name="checked">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QRadioButton" name="radioButton_10">
+         <property name="text">
+          <string>高斯迭代法</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QRadioButton" name="radioButton_11">
+         <property name="text">
+          <string>逐次超松弛迭代</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="verticalLayoutWidget_10">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>270</y>
+        <width>621</width>
+        <height>541</height>
+       </rect>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_10">
+       <item>
+        <widget class="QLabel" name="label_43">
+         <property name="font">
+          <font>
+           <pointsize>11</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>求解线方程组形式如下：
+ [系数矩阵][解向量] = [常数向量]</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_44">
+         <property name="font">
+          <font>
+           <pointsize>11</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>请输入解向量大小 n ：</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="lineEdit_11"/>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_45">
+         <property name="font">
+          <font>
+           <pointsize>11</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>请输入系数矩阵(n x n):             
+                                   *分n行输入，每行输入n个数，每行中每两个数用空格分隔</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QTextEdit" name="textEdit_2"/>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_46">
+         <property name="font">
+          <font>
+           <pointsize>11</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>请输入常数向量的转置矩阵：</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="lineEdit_12"/>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="verticalLayoutWidget_11">
+      <property name="geometry">
+       <rect>
+        <x>640</x>
+        <y>270</y>
+        <width>421</width>
+        <height>541</height>
+       </rect>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_11">
+       <item>
+        <widget class="QLabel" name="label_47">
+         <property name="font">
+          <font>
+           <pointsize>11</pointsize>
+          </font>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::NoFrame</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Plain</enum>
+         </property>
+         <property name="text">
+          <string>计算结果如下：</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QTextBrowser" name="textBrowser_2"/>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QCalendarWidget" name="calendarWidget_4">
+      <property name="geometry">
+       <rect>
+        <x>820</x>
+        <y>0</y>
+        <width>248</width>
+        <height>197</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QWidget" name="gridLayoutWidget">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>180</y>
+        <width>351</width>
+        <height>80</height>
+       </rect>
+      </property>
+      <layout class="QGridLayout" name="gridLayout">
+       <item row="0" column="0">
+        <widget class="QLabel" name="label_48">
+         <property name="font">
+          <font>
+           <pointsize>11</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>请输入松弛因子：</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="0">
+        <widget class="QLineEdit" name="lineEdit_13"/>
+       </item>
+       <item row="0" column="1">
+        <widget class="QLabel" name="label_49">
+         <property name="font">
+          <font>
+           <pointsize>11</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>请输入要求精度：</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="1">
+        <widget class="QLineEdit" name="lineEdit_14"/>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QPushButton" name="pushButton_4">
+      <property name="geometry">
+       <rect>
+        <x>390</x>
+        <y>210</y>
+        <width>141</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>进行线性方程组求解</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="tab_5">
+     <attribute name="title">
+      <string>矩阵特征值计算</string>
+     </attribute>
+     <widget class="QLabel" name="label_51">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>30</y>
+        <width>391</width>
+        <height>151</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Times New Roman</family>
+        <pointsize>20</pointsize>
+       </font>
+      </property>
+      <property name="cursor">
+       <cursorShape>ForbiddenCursor</cursorShape>
+      </property>
+      <property name="text">
+       <string>Happy to see you again！
+This is function 5.
+Author: 黄宇辰
+StudentID: 10185102253</string>
+      </property>
+     </widget>
+     <widget class="QWidget" name="verticalLayoutWidget_12">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>280</y>
+        <width>541</width>
+        <height>541</height>
+       </rect>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_12">
+       <item>
+        <widget class="QTextEdit" name="textEdit_3"/>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_54">
+         <property name="font">
+          <font>
+           <pointsize>11</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>请输入矩阵(n x n):             
+                                   *分n行输入，每行输入n个数，每行中每两个数用空格分隔</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_55">
+         <property name="font">
+          <font>
+           <pointsize>11</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>请输入初始向量：</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="lineEdit_17"/>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="gridLayoutWidget_2">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>190</y>
+        <width>351</width>
+        <height>80</height>
+       </rect>
+      </property>
+      <layout class="QGridLayout" name="gridLayout_2">
+       <item row="1" column="0">
+        <widget class="QLineEdit" name="lineEdit_18">
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="0">
+        <widget class="QLabel" name="label_53">
+         <property name="font">
+          <font>
+           <pointsize>11</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>请输入要求精度：</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QCalendarWidget" name="calendarWidget_5">
+      <property name="geometry">
+       <rect>
+        <x>820</x>
+        <y>0</y>
+        <width>248</width>
+        <height>197</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QWidget" name="verticalLayoutWidget_13">
+      <property name="geometry">
+       <rect>
+        <x>550</x>
+        <y>280</y>
+        <width>421</width>
+        <height>541</height>
+       </rect>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_14">
+       <item>
+        <widget class="QLabel" name="label_52">
+         <property name="font">
+          <font>
+           <pointsize>11</pointsize>
+          </font>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::NoFrame</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Plain</enum>
+         </property>
+         <property name="text">
+          <string>按模最大计算结果如下：</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QTextBrowser" name="textBrowser_3"/>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_56">
+         <property name="font">
+          <font>
+           <pointsize>11</pointsize>
+          </font>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::NoFrame</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Plain</enum>
+         </property>
+         <property name="text">
+          <string>按模最小计算结果如下：</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QTextBrowser" name="textBrowser_4"/>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QPushButton" name="pushButton_5">
+      <property name="geometry">
+       <rect>
+        <x>390</x>
+        <y>210</y>
+        <width>141</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>进行特征值求解</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="tab_6">
+     <attribute name="title">
+      <string>常微分方程初值问题</string>
+     </attribute>
+     <widget class="QLabel" name="label_57">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>30</y>
+        <width>391</width>
+        <height>151</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Times New Roman</family>
+        <pointsize>20</pointsize>
+       </font>
+      </property>
+      <property name="cursor">
+       <cursorShape>ForbiddenCursor</cursorShape>
+      </property>
+      <property name="text">
+       <string>Happy to see you again！
+This is function 6.
+特别感谢汪杰同学
+在此功能中给予的帮助！</string>
+      </property>
+     </widget>
+     <widget class="QCalendarWidget" name="calendarWidget_6">
+      <property name="geometry">
+       <rect>
+        <x>820</x>
+        <y>0</y>
+        <width>248</width>
+        <height>197</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QWidget" name="layoutWidget">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>190</y>
+        <width>491</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout">
+       <item>
+        <widget class="QLabel" name="label_59">
+         <property name="text">
+          <string>请输入步长：</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="lineEdit_19"/>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_60">
+         <property name="text">
+          <string>请输入x值上限：</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="lineEdit_20"/>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="verticalLayoutWidget_15">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>610</y>
+        <width>211</width>
+        <height>186</height>
+       </rect>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_15">
+       <item>
+        <widget class="QPushButton" name="pushButton_7">
+         <property name="font">
+          <font>
+           <pointsize>12</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>编译方程组</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_63">
+         <property name="font">
+          <font>
+           <pointsize>12</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>请选择初值问题解法：</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QRadioButton" name="radioButton_4">
+         <property name="font">
+          <font>
+           <pointsize>12</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>欧拉法</string>
+         </property>
+         <property name="checked">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QRadioButton" name="radioButton_3">
+         <property name="font">
+          <font>
+           <pointsize>12</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>改进欧拉法</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QRadioButton" name="radioButton_7">
+         <property name="font">
+          <font>
+           <pointsize>12</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>龙格塔库法</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pushButton_6">
+         <property name="font">
+          <font>
+           <pointsize>12</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>进行求解</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="verticalLayoutWidget_16">
+      <property name="geometry">
+       <rect>
+        <x>500</x>
+        <y>260</y>
+        <width>391</width>
+        <height>561</height>
+       </rect>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_16">
+       <item>
+        <widget class="QLabel" name="label_64">
+         <property name="font">
+          <font>
+           <pointsize>12</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>求解结果如下：</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QTextBrowser" name="textBrowser_5"/>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="verticalLayoutWidget_14">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>250</y>
+        <width>491</width>
+        <height>351</height>
+       </rect>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_13">
+       <item>
+        <widget class="QLabel" name="label_58">
+         <property name="text">
+          <string>请输入常微分方程(组)：</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QTextEdit" name="textEdit_4"/>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_61">
+         <property name="text">
+          <string>请输入y及y高阶导初值：</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QTextEdit" name="textEdit_5"/>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1087</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <addaction name="actionExit"/>
+    <addaction name="separator"/>
+   </widget>
+   <widget class="QMenu" name="menuAbout">
+    <property name="title">
+     <string>About</string>
+    </property>
+    <addaction name="actionAuthor"/>
+    <addaction name="separator"/>
+   </widget>
+   <addaction name="menuFile"/>
+   <addaction name="menuAbout"/>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <action name="actionExit">
+   <property name="text">
+    <string>Exit</string>
+   </property>
+  </action>
+  <action name="actionAuthor">
+   <property name="text">
+    <string>Author</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <customwidgets>
+  <customwidget>
+   <class>QCustomPlot</class>
+   <extends>QWidget</extends>
+   <header>qcustomplot.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources>
+  <include location="NumericalCalculation.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>actionAuthor</sender>
+   <signal>triggered()</signal>
+   <receiver>NumericalCalculationClass</receiver>
+   <slot>About()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>316</x>
+     <y>316</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionExit</sender>
+   <signal>triggered()</signal>
+   <receiver>NumericalCalculationClass</receiver>
+   <slot>Exit()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>316</x>
+     <y>316</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton</sender>
+   <signal>clicked()</signal>
+   <receiver>NumericalCalculationClass</receiver>
+   <slot>Calculate()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>307</x>
+     <y>581</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>374</x>
+     <y>482</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_3</sender>
+   <signal>clicked()</signal>
+   <receiver>NumericalCalculationClass</receiver>
+   <slot>DirectSolve()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>370</x>
+     <y>283</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>-25</x>
+     <y>294</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton</sender>
+   <signal>clicked()</signal>
+   <receiver>NumericalCalculationClass</receiver>
+   <slot>PaintxyInter()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>342</x>
+     <y>593</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>556</x>
+     <y>514</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_2</sender>
+   <signal>clicked()</signal>
+   <receiver>NumericalCalculationClass</receiver>
+   <slot>intergrate_cal()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>679</x>
+     <y>329</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>164</x>
+     <y>365</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_4</sender>
+   <signal>clicked()</signal>
+   <receiver>NumericalCalculationClass</receiver>
+   <slot>Iteration_Solve()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>485</x>
+     <y>296</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1108</x>
+     <y>322</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_5</sender>
+   <signal>clicked()</signal>
+   <receiver>NumericalCalculationClass</receiver>
+   <slot>Charactvalue()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>440</x>
+     <y>297</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1119</x>
+     <y>378</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_7</sender>
+   <signal>clicked()</signal>
+   <receiver>NumericalCalculationClass</receiver>
+   <slot>MakeCode()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>108</x>
+     <y>685</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>429</x>
+     <y>962</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_6</sender>
+   <signal>clicked()</signal>
+   <receiver>NumericalCalculationClass</receiver>
+   <slot>LastPartcal()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>49</x>
+     <y>844</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>573</x>
+     <y>982</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>About()</slot>
+  <slot>Exit()</slot>
+  <slot>Calculate()</slot>
+  <slot>PaintxyInter()</slot>
+  <slot>intergrate_cal()</slot>
+  <slot>DirectSolve()</slot>
+  <slot>Iteration_Solve()</slot>
+  <slot>Charactvalue()</slot>
+  <slot>MakeCode()</slot>
+  <slot>LastPartcal()</slot>
+ </slots>
+</ui>
